@@ -6,7 +6,7 @@ geographical data.
 
 """
 
-from .utils import sorted_by_key  # noqa
+from .utils import sort_by_key  # noqa
 
 ##
 
