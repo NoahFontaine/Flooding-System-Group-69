@@ -9,7 +9,7 @@ geographical data.
 from .utils import sorted_by_key  # noqa
 
 
-from haversine import haversine, Unit
+from haversine import haversine
 from floodsystem.stationdata import build_station_list
 
 def stations_by_distance(stations, p):
