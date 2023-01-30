@@ -6,7 +6,7 @@ geographical data.
 
 """
 
-from .utils import sort_by_key  # noqa
+from floodsystem.utils import sorted_by_key  # noqa
 
 ## the followings probably not gonna work ##
 
@@ -18,7 +18,7 @@ def stations_by_distance(stations, p):
   for station in staions:
     distance = haversine(station.coord, p)
     list1.append[tuple(station, distance)]
-  list1.sort_by_key
+  list1.sorted_by_key
   return list1
   
   
