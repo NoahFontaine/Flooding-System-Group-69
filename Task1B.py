@@ -35,6 +35,6 @@ def demonstration():
         distance = j[1]
         list3.append((name, t[i][0], distance))
         i += 1
-    return list3[:11]
+    return list3[:10], list3[-10:]
 
 print(demonstration())
