@@ -6,12 +6,12 @@ geographical data.
 
 """
 
-from floodsystem.utils import sorted_by_key  # noqa
+from .utils import sorted_by_key  # noqa
 
 ## the followings probably not gonna work ##
 
 from haversine import haversine
-from floodsystem.stationdata import build_station_list
+from .stationdata import build_station_list
 
 list1 = []
 def stations_by_distance(stations, p):
