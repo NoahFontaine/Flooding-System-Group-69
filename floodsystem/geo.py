@@ -7,19 +7,13 @@ geographical data.
 """
 
 from .utils import sorted_by_key  # noqa
-
-## the followings probably not gonna work ##
-
 from haversine import haversine
-from .stationdata import build_station_list
 
-list1 = []
+
 def stations_by_distance(stations, p):
+  list1 = []  #Empty List
   for station in stations:
     distance = haversine(station.coord, p)
-    list1.append[tuple(station, distance)]
-  list1.sorted_by_key
-  return list1
-  
-  
-#>>>>>>> c5b891423e20fc30a4bc33f4cf11ee0f70835319
+    x = (station.name, distance) # Defines a new tupple for every station
+    list1.append(x) # Adds that tupple to list1
+  return sorted_by_key(list1, 1) # Returns sorted list1 by 2nd element (distance)
