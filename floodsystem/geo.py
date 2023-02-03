@@ -29,3 +29,15 @@ def stations_within_radius(stations, centre, r):
     if distance < r:
       l.append(station.name) # Adds the station name of the station if distance < given max radius
   return l  # Returns list of all the stations
+
+def rivers_with_station(stations):
+  rivers = []
+  for station in stations:
+    rivers.append(station.river)
+  return set(rivers)
+
+def stations_by_river(stations):
+  dict = {}
+  for station in stations:
+    dict[station.name] = station.river
+  return dict
