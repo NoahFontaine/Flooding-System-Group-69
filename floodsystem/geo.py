@@ -38,6 +38,4 @@ def rivers_with_station(stations):
 
 def stations_by_river(stations):
   dict = {}
-  for station in stations:
-    dict[station.name] = station.river
-  return dict
+
