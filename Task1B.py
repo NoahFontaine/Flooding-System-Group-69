@@ -35,6 +35,8 @@ def demonstration():
         distance = j[1]
         list3.append((name, t[i][0], distance))
         i += 1
-    return list3[:10], list3[-10:]
+    print(list3[:10], list3[-10:])
 
-print(demonstration())
+if __name__ == "__main__":
+  print("*** Task 1B: CUED Part IA Flood Warning System ***")
+  demonstration()
