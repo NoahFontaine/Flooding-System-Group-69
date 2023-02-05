@@ -7,8 +7,10 @@ print(len(x)) # number of rivers with at least one moniroting system
 sorted(x)
 print(x[:10]) # first 10 rivers in alphabetical order
 
+# This function prints the names of stations located on the following rivers in alphabetical order
 y = stations_by_river(build_station_list())
-print(y['River Aire'])
+sorted(y)
+print(y['River Aire']) 
 print(y['River Cam'])
 print(y['River Thames'])
 
