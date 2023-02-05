@@ -53,5 +53,5 @@ def stations_by_river(stations):
 def rivers_by_station_number(stations, N):
   list = [] # Empty list
   for station in stations:
-    list.append(station.river,)
+    list.append((station.river,len(dict[station.name])))
 
