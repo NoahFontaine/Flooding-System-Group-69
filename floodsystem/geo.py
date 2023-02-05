@@ -6,7 +6,7 @@ geographical data.
 
 """
 
-from floodsystem.utils import sorted_by_key  # noqa
+from .utils import sorted_by_key  # noqa
 from haversine import haversine
 
 ### Part of 1B - Stations sorted by distance from coordinate ###
@@ -53,5 +53,12 @@ def stations_by_river(stations):
 def rivers_by_station_number(stations, N):
   list = [] # Empty list
   for station in stations:
-    list.append((station.river,len(dict[station.name])))
+    list.append((station.river,len(dict[station.river])))
+  sorted_by_key(list, 1)
+  
+  for i in N-1:
+    if list[i[1]] == list[i[1]]:
+      N+=1
+  list1 = list[:N]
+  return list1
 
