@@ -2,8 +2,8 @@
 
 from floodsystem.geo import stations_by_distance
 from floodsystem.stationdata import build_station_list
+from floodsystem.utils import sorted_by_key
 from haversine import haversine
-from floodsystem.utils import sorted_by_key  # noqa
 
 
 ### This is the same function as in geo.py, but modified to have TOWNS and not STATION ###
