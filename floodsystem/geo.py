@@ -6,7 +6,7 @@ geographical data.
 
 """
 
-from .utils import sorted_by_key  # noqa
+from utils import sorted_by_key  # noqa
 from haversine import haversine
 
 ### Part of 1B - Stations sorted by distance from coordinate ###
