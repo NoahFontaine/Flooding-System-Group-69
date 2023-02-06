@@ -51,14 +51,15 @@ def stations_by_river(stations):
   
 ### Part of 1E ###
 def rivers_by_station_number(stations, N):
+  dict = stations_by_river(stations) # Defines the new dictionary from stations_by_river function
   list = [] # Empty list
   for station in stations:
     list.append((station.river,len(dict[station.river])))
-  sorted_by_key(list, 1)
-  
-  for i in N-1:
-    if list[i[1]] == list[i[1]]:
-      N+=1
-  list1 = list[:N]
-  return list1
+  list2 = sorted_by_key(list, 1, reverse = True)
 
+  for i in range(len(list2)-1):
+    if list2[i] == list2[i+1]:
+      list2.remove(list2[i])
+      i+=1
+  list3 = list[:N]
+  return list2
