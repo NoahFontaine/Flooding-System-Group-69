@@ -10,7 +10,6 @@ list2 = inconsistent_typical_range_stations(stations)
 for station in list2:
     list3.append(station.name)
 
-list3.sort
-print(list3)
+x = sorted(list3)
+print(x)
 
-#not sorted yet
