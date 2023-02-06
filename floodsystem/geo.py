@@ -58,9 +58,12 @@ def rivers_by_station_number(stations, N):
   list2 = set(list) # Removes all duplicates
   list3 = sorted_by_key(list2, 1, reverse=True) # Sorts all duplicates from greatest number to smallest
   list4 = []
-  i = 0
-  while i <= N:
-    list4.append(list3[i])
+  x = 0
+
+  for i in range(N):
     if list3[i][1] == list3[i+1][1]:
-      N = N + 1
+      x += 1
+  for i in range(N+x):
+    list4.append(list3[i])
+  
   return list4
