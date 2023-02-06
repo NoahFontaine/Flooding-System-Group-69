@@ -23,6 +23,8 @@ def stations_by_distance(stations, p):
 ### Part of 1C - Stations within a specific radius of a center coordinate ###
 
 def stations_within_radius(stations, centre, r):
+  if r < 0:
+    raise ValueError("r must be a positive integer")
   l = []   # Empty list that will contain the output with all the correct stations
   for station in stations:
     distance = haversine(station.coord, centre) # Computes the distance of the station from the given centre coordinate
@@ -51,7 +53,11 @@ def stations_by_river(stations):
   
 ### Part of 1E ###
 def rivers_by_station_number(stations, N):
+  if N < 0:
+    raise ValueError("N must be a positive integer")
   dict = stations_by_river(stations) # Defines the new dictionary from stations_by_river function
+  if N > len(dict):
+    raise ValueError("N must be smaller than the number of rivers")
   list = [] # Empty list
   for station in stations:
     list.append((station.river,len(dict[station.river])))
@@ -60,10 +66,10 @@ def rivers_by_station_number(stations, N):
   list4 = []
   x = 0
 
-  for i in range(N):
+  for i in range(N): # Finds out how many of the rivers have the same number of stations
     if list3[i][1] == list3[i+1][1]:
       x += 1
-  for i in range(N+x):
+  for i in range(N+x): # Adds x many rivers to the list, as required
     list4.append(list3[i])
   
   return list4

@@ -39,7 +39,7 @@ class MonitoringStation:
         d += "   typical range: {}".format(self.typical_range)
         return d
     
-    ### task 1f 
+    ### Task 1F ###
     def typical_range_consistent(self):
         if self.typical_range != None:
             if self.typical_range[0] < self.typical_range[1]:
