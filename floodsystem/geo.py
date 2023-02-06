@@ -55,11 +55,12 @@ def rivers_by_station_number(stations, N):
   list = [] # Empty list
   for station in stations:
     list.append((station.river,len(dict[station.river])))
-  list2 = sorted_by_key(list, 1, reverse = True)
-
-  for i in range(len(list2)-1):
-    if list2[i] == list2[i+1]:
-      list2.remove(list2[i])
-      i+=1
-  list3 = list[:N]
-  return list2
+  list2 = set(list) # Removes all duplicates
+  list3 = sorted_by_key(list2, 1, reverse=True) # Sorts all duplicates from greatest number to smallest
+  list4 = []
+  i = 0
+  while i <= N:
+    list4.append(list3[i])
+    if list3[i][1] == list3[i+1][1]:
+      N = N + 1
+  return list4
