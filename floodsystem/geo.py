@@ -64,12 +64,12 @@ def rivers_by_station_number(stations, N):
   list2 = set(list) # Removes all duplicates
   list3 = sorted_by_key(list2, 1, reverse=True) # Sorts all duplicates from greatest number to smallest
   list4 = []
-  x = 0
 
-  for i in range(N): # Finds out how many of the rivers have the same number of stations
-    if list3[i][1] == list3[i+1][1]:
-      x += 1
-  for i in range(N+x): # Adds x many rivers to the list, as required
+  for i in range(N): # Adds x many rivers to the list, as required
     list4.append(list3[i])
+
+  for i in range(len(list3)):
+    if list3[i][1] == list4[N-1][1]:
+      list4.append(list3[i])
   
   return list4
