@@ -2,7 +2,7 @@ from .station import MonitoringStation
 from .utils import sorted_by_key  # noqa
 
 def stations_level_over_threshold(stations, tol):
-    list = []
+    list = []  #Empty list
     for station in stations:
         if station.relative_water_level() != None:
             relative = station.relative_water_level()

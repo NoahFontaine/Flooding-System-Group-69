@@ -48,16 +48,19 @@ class MonitoringStation:
     
     ### Task 2B ###
     def relative_water_level(self):
+        # Sets the high and low boundaries of the relative water levels
         if self.typical_range != None:
             high = self.typical_range[1]
             low = self.typical_range[0]
         else:
             return None
+        # Computes the difference between the typical high and low
         diff = high - low
         if self.latest_level != None:
             llevel = self.latest_level
         else:
             return None
+        # Computes the relative water level
         frac = (llevel - low)/diff
         return frac
         
