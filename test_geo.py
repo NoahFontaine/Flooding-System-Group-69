@@ -95,7 +95,7 @@ def test_rivers_by_station_number():
 
     # Test that the function is the correct length and contains the correct River 1
 
-    assert len(test) == 1
+    assert len(test) == 2
     assert test[0][1] == 2
     assert "River1" in test[0]
     
