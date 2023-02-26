@@ -6,7 +6,6 @@ for manipulating/modifying station data
 
 """
 
-
 class MonitoringStation:
     """This class represents a river level monitoring station"""
 
