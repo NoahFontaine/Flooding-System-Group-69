@@ -7,7 +7,7 @@ station_id = "ID"
 measure_id = "Measure"
 label = "Label"
 coord = (0,0)
-typical_range = (0,0)
+typical_range = (0,1)
 river = "River"
 town = "Town"
 station = MonitoringStation(station_id, measure_id, label, coord, typical_range, river, town)
@@ -34,18 +34,29 @@ station2 = MonitoringStation(station_id2, measure_id2, label2, coord2, typical_r
 
 station_list = [station, station1, station2]
 
+# Making up the latest level of the stations
+
+station.latest_level = 5
+station1.latest_level = 3
+station2.latest_level = -1
+
+
 """Test the function stations_level_over_threshold()"""
 
 def test_stations_level_over_threshold():
     test = stations_level_over_threshold(station_list, 0.4)
-
+    assert len(test) == 2
+    for i in range(2):
+       assert "Label2" != test[i][0]
 
 
 """Test the function stations_highest_rel_level()"""
 
-#def test_stations_highest_rel_level():
-  #  test = stations_highest_rel_level(station_list, 1)
+def test_stations_highest_rel_level():
+   test = stations_highest_rel_level(station_list, 1)
+   assert len(test) == 1
+   assert test == ["Label"]
 
 
-#test_stations_level_over_threshold()
-#test_stations_highest_rel_level()
+print(test_stations_level_over_threshold())
+print(test_stations_highest_rel_level())
