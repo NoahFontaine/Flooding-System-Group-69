@@ -9,15 +9,13 @@ def run():
     update_water_levels(stations)
     list = stations_highest_rel_level(stations, 5)
     print (list)
-    list2 = []
+   
     dt = 10
     for station in stations:
         if station.name in list:
             dates, levels = fetch_measure_levels(station.measure_id, dt=datetime.timedelta(days=dt))
             plot_water_levels(station, dates, levels)
-           
-        else:
-            pass
+          
 
 
 if __name__ == "__main__":
