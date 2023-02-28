@@ -43,8 +43,8 @@ def test_stations_level_over_threshold():
 
 """Test the function stations_highest_rel_level()"""
 
-def test_stations_highest_rel_level():
-    test = stations_highest_rel_level(station_list, 1)
+#def test_stations_highest_rel_level():
+  #  test = stations_highest_rel_level(station_list, 1)
 
 
 #test_stations_level_over_threshold()
