@@ -8,7 +8,6 @@ def run():
     stations = build_station_list()
     update_water_levels(stations)
     list = stations_highest_rel_level(stations, 5)
-    print (list)
    
     dt = 10
     for station in stations:
