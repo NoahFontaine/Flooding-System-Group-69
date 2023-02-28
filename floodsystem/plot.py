@@ -10,7 +10,6 @@ def plot_water_levels(station, dates, levels):
     plt.xticks(rotation=45)
     plt.title(station.name)
 
-    plt.tight_layout
-
+    plt.legend()
+    plt.tight_layout()
     plt.show()
-
