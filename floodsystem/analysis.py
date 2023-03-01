@@ -24,14 +24,14 @@ def trend(station, dates, levels, p=4):
     low = station.typical_range[0]
     high = station.typical_range[1]
   
-    slope = np.diff(y)
+    s = np.diff(y)
 
   # criteria 1. max value + 2. rising or falling trend
 
-    if max(y) >= high and slope[-1]>0:
+    if max(y) >= high and s[-1]>0:
       return(station.town,"severe")
   
-    elif max(y) >=high and slope[-1]<=0:
+    elif max(y) >=high and s[-1]<=0:
       return(station.town, "high")
     
     elif high>max(y)>= low:
