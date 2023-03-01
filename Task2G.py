@@ -12,7 +12,7 @@ def run():
     
     # 5 most at risk stations
     z = stations_highest_rel_level(stations, 5)
-    print(z)
+   
     list1 = []
 
     # 2 days for assessment
